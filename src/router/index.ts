@@ -44,14 +44,5 @@ const router = createRouter({
   routes,
 })
 
-router.isReady()
-  .then(() => {
-    const path = localStorage.getItem('path') ?? '/'
-    void router.replace(path)
-    localStorage.removeItem('path')
-  })
-  .catch(() => {
-    // Router initialization failed, ignore
-  })
 
 export default router

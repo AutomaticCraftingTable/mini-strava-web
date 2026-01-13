@@ -1,6 +1,6 @@
 import type { User } from './User'
 
-export type ActivityType = 'run' | 'ride' | 'walk' | 'swim' | 'other'
+export type ActivityType = 'run' | 'bicycle' | 'walk' | 'swim' | 'other'
 
 export interface Activity {
   id: number

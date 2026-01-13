@@ -93,7 +93,6 @@ const handleDeleteCancel = () => {
 const getActivityTypeLabel = (type: ActivityType) => {
   const labels: Record<string, string> = {
     run: 'Bieg',
-    ride: 'Rower',
     bicycle: 'Rower',
     walk: 'Spacer',
     swim: 'Pływanie',
@@ -124,7 +123,6 @@ const closeDetails = () => {
 
 <template>
   <div class="p-8 min-h-[calc(100vh-80px)] animated-gradient">
-    <!-- Decorative elements -->
     <div class="fixed top-40 right-20 w-64 h-64 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float" />
 
     <div
@@ -206,7 +204,7 @@ const closeDetails = () => {
               </option>
 
               <option
-                value="ride"
+                value="bicycle"
                 class="bg-gray-800"
               >
                 Rower
@@ -300,7 +298,7 @@ const closeDetails = () => {
       </div>
 
       <!-- Activities Table Card -->
-      <div class="glass p-6 rounded-3xl">
+      <div class="glass rounded-3xl overflow-hidden">
         <div
           v-if="filteredActivities.length === 0 && !isLoading"
           class="text-center py-16"
@@ -320,32 +318,32 @@ const closeDetails = () => {
         >
           <table class="w-full">
             <thead>
-              <tr class="border-b border-white/20">
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+              <tr class="gradient-primary">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Użytkownik
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Typ
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Dystans
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Czas
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Data
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white">
                   Opis
                 </th>
 
-                <th class="text-left p-4 font-bold uppercase text-xs tracking-wider text-white/80">
+                <th class="text-left p-5 font-bold uppercase text-xs tracking-wider text-white last:rounded-r-xl">
                   Akcje
                 </th>
               </tr>
@@ -366,7 +364,7 @@ const closeDetails = () => {
                     class="px-3 py-1 rounded-full text-xs font-semibold"
                     :class="{
                       'bg-indigo-100 text-indigo-700': activity.activity_type === 'run',
-                      'bg-teal-100 text-teal-700': activity.activity_type === 'ride',
+                      'bg-purple-500 text-white': activity.activity_type === 'bicycle',
                       'bg-orange-100 text-orange-700': activity.activity_type === 'walk',
                       'bg-gray-100 text-gray-700': activity.activity_type === 'other'
                     }"
@@ -478,7 +476,7 @@ const closeDetails = () => {
                 class="px-3 py-1 rounded-full text-xs font-semibold"
                 :class="{
                   'bg-indigo-100 text-indigo-700': selectedActivity.activity_type === 'run',
-                  'bg-teal-100 text-teal-700': selectedActivity.activity_type === 'ride',
+                  'bg-purple-500 text-white': selectedActivity.activity_type === 'bicycle',
                   'bg-orange-100 text-orange-700': selectedActivity.activity_type === 'walk',
                   'bg-blue-100 text-blue-700': selectedActivity.activity_type === 'swim',
                   'bg-gray-100 text-gray-700': selectedActivity.activity_type === 'other'

@@ -17,7 +17,7 @@ const isActive = (path: string) => route.path === path
 </script>
 
 <template>
-  <header class="px-6 py-4 flex justify-between items-center glass-dark sticky top-0 z-50">
+  <header class="px-6 py-4 flex justify-between items-center glass sticky top-0 z-50">
     <div class="flex items-center gap-8">
       <router-link
         to="/"
