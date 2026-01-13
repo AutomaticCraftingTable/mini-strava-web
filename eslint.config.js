@@ -3,7 +3,7 @@ import js from '@eslint/js'
 import stylisticPlugin from '@stylistic/eslint-plugin'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
-import { defineConfig } from 'eslint/config'
+
 import importPlugin from 'eslint-plugin-import'
 import globals from 'globals'
 import vueParser from 'vue-eslint-parser'
@@ -11,7 +11,7 @@ import customPlugin from './eslint/eslint.custom.js'
 
 const eslintrc = new FlatCompat()
 
-export default defineConfig([
+export default [
   {
     ignores: [
       'public/**/*.*',
@@ -19,7 +19,7 @@ export default defineConfig([
       'three.js/**/*.*',
       'vite.config.ts',
       'dist/**/*.*',
-    ], 
+    ],
   },
 
   ...eslintrc.extends('plugin:vue/recommended'),
@@ -90,7 +90,7 @@ export default defineConfig([
         'warn', {
           max: 2,
           maxBOF: 0,
-          maxEOF: 0, 
+          maxEOF: 0,
         },
       ],
       '@stylistic/comma-spacing': ['warn', { after: true }],
@@ -117,11 +117,11 @@ export default defineConfig([
           multiline: { delimiter: 'none' },
           singleline: {
             delimiter: 'comma',
-            requireLast: true, 
+            requireLast: true,
           },
         },
       ],
-      
+
       'import/first': 'error',
       'import/no-duplicates': 'error',
       'import/newline-after-import': ['warn', { count: 1 }],
@@ -137,7 +137,7 @@ export default defineConfig([
       ],
 
       'custom/function-multiline-arguments': 'warn',
-      
+
       'vue/max-attributes-per-line': [
         'warn', {
           singleline: 1,
@@ -155,6 +155,7 @@ export default defineConfig([
       'vue/block-tag-newline': ['warn', { maxEmptyLines: 0 }],
       'vue/padding-line-between-blocks': 'warn',
       'vue/padding-line-between-tags': 'warn',
+      'vue/multi-word-component-names': 'off',
     },
   },
-])
+]

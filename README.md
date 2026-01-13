@@ -1,6 +1,4 @@
-# Vite + Vue.js static SPA
-
-This repository contains a minimal Vite + Vue 3 single-page application scaffold.
+# Mini Strava - Admin Panel
 
 Getting started
 

@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vue-tsc --noEmit && vite build",
-  "preview": "vite preview",
-  "lint": "eslint .",
-  "lintf": "eslint . --fix"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lintf": "eslint . --fix"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
@@ -17,6 +18,8 @@
     "vue-router": "^4.6.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
     "@stylistic/eslint-plugin": "^5.4.0",
     "@types/node": "^24.7.2",
     "@typescript-eslint/eslint-plugin": "^8.46.1",
@@ -26,8 +29,10 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-vue": "^10.5.0",
-    "typescript": "^5.9.3",
+    "globals": "^17.0.0",
+    "typescript": "^5.7.2",
     "vite": "^7.1.10",
-    "vue-tsc": "^3.1.1"
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.2.2"
   }
 }

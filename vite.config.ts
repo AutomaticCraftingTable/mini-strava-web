@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
@@ -12,8 +13,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '$src': '/src',
+      '$src': path.resolve(__dirname, './src'),
     },
   },
-  base: process.env.BASE_PATH || '/base',
+  base: process.env.BASE_PATH || '/',
 })

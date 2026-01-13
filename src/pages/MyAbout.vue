@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const foo = import.meta.env.BASE_URL
 </script>
 
 <template>
