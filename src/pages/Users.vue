@@ -31,7 +31,6 @@ const closeDetails = () => {
 
 <template>
   <div class="p-8 min-h-[calc(100vh-80px)] animated-gradient">
-    <!-- Decorative elements -->
     <div
       class="fixed top-40 right-10 w-48 h-48 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float"
       style="animation-delay: -2s;"
@@ -165,7 +164,6 @@ const closeDetails = () => {
         v-if="selectedUser"
         class="space-y-6"
       >
-        <!-- User header -->
         <div class="flex items-center gap-4 pb-6 border-b border-gray-200">
           <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center text-white text-2xl font-bold shadow-glow">
             {{ selectedUser.email.charAt(0).toUpperCase() }}

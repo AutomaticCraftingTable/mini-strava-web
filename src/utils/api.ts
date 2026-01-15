@@ -27,7 +27,7 @@ const handleApiError = async (response: Response, defaultMessage: string): Promi
     }
   }
   catch {
-    // Ignore JSON parse errors
+    // empty
   }
 
   return new Error(defaultMessage)

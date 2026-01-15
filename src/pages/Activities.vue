@@ -164,7 +164,7 @@ const closeDetails = () => {
         </p>
       </div>
 
-      <!-- Filters Card -->
+
       <div class="glass p-6 rounded-3xl mb-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           <div>
@@ -297,7 +297,7 @@ const closeDetails = () => {
         </button>
       </div>
 
-      <!-- Activities Table Card -->
+
       <div class="glass rounded-3xl overflow-hidden">
         <div
           v-if="filteredActivities.length === 0 && !isLoading"
@@ -460,7 +460,6 @@ const closeDetails = () => {
         v-if="selectedActivity"
         class="space-y-6"
       >
-        <!-- Activity header -->
         <div class="flex items-center gap-4 pb-6 border-b border-gray-200">
           <div class="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center text-white text-3xl font-bold shadow-glow">
             🏃

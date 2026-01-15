@@ -16,7 +16,6 @@ onMounted(async () => {
 
 <template>
   <div class="p-8 min-h-[calc(100vh-80px)] animated-gradient">
-    <!-- Decorative elements -->
     <div class="fixed top-40 right-20 w-64 h-64 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float" />
 
     <div
@@ -50,7 +49,6 @@ onMounted(async () => {
         v-if="adminStats"
         class="grid grid-cols-1 md:grid-cols-3 gap-8"
       >
-        <!-- Users Card -->
         <div class="glass p-8 rounded-3xl hover-lift cursor-pointer group">
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-base font-bold uppercase tracking-wider text-white/80">
@@ -77,7 +75,7 @@ onMounted(async () => {
           </div>
         </div>
 
-        <!-- Activities Card -->
+
         <div class="glass p-8 rounded-3xl hover-lift cursor-pointer group">
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-base font-bold uppercase tracking-wider text-white/80">
@@ -107,7 +105,7 @@ onMounted(async () => {
           </div>
         </div>
 
-        <!-- Distance Card -->
+
         <div class="glass p-8 rounded-3xl hover-lift cursor-pointer group">
           <div class="flex items-center justify-between mb-6">
             <h3 class="text-base font-bold uppercase tracking-wider text-white/80">

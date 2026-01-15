@@ -38,7 +38,6 @@ const handleKeyDown = (event: KeyboardEvent) => {
     v-if="!isAdminLoggedIn"
     class="min-h-screen flex items-center justify-center p-4 animated-gradient"
   >
-    <!-- Decorative elements -->
     <div class="fixed top-20 left-20 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-40 float" />
 
     <div
@@ -155,7 +154,7 @@ const handleKeyDown = (event: KeyboardEvent) => {
 
       <div class="mt-6 text-center">
         <p class="text-xs text-white opacity-60">
-          © 2024 MiniStrava. Wszelkie prawa zastrzeżone.
+          © 2026 MiniStrava. Wszelkie prawa zastrzeżone.
         </p>
       </div>
     </div>
