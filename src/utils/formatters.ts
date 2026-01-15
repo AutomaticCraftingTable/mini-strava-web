@@ -1,6 +1,6 @@
 import type { User } from '$src/types/User'
 
-export const formatDistance = (distance: number): string => `${distance.toFixed(2)} km`
+export const formatDistance = (distance: number): string => `${(distance / 1000).toFixed(2)} km`
 
 export const formatDuration = (seconds: number): string => {
   const hours = Math.floor(seconds / 3600)
@@ -17,7 +17,7 @@ export const formatDuration = (seconds: number): string => {
 }
 
 export const formatDate = (dateString: string): string => new Date(dateString).toLocaleDateString(
-  'pl-PL', 
+  'pl-PL',
   {
     year: 'numeric',
     month: '2-digit',
@@ -26,7 +26,7 @@ export const formatDate = (dateString: string): string => new Date(dateString).t
 )
 
 export const formatDateTime = (dateString: string): string => new Date(dateString).toLocaleString(
-  'pl-PL', 
+  'pl-PL',
   {
     dateStyle: 'medium',
     timeStyle: 'medium',

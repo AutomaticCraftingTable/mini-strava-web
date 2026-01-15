@@ -62,11 +62,11 @@ const filteredActivities = computed(() => {
   }
 
   if (minDistance.value !== '') {
-    filtered = filtered.filter(activity => activity.distance >= Number(minDistance.value))
+    filtered = filtered.filter(activity => activity.distance >= Number(minDistance.value) * 1000)
   }
 
   if (maxDistance.value !== '') {
-    filtered = filtered.filter(activity => activity.distance <= Number(maxDistance.value))
+    filtered = filtered.filter(activity => activity.distance <= Number(maxDistance.value) * 1000)
   }
 
   return filtered
